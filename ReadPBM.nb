@@ -1,0 +1,584 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     27732,        576]
+NotebookOptionsPosition[     26165,        542]
+NotebookOutlinePosition[     26603,        559]
+CellTagsIndexPosition[     26560,        556]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  "\"\</Users/nick2/Teaching/PHAS2443/MiniProj/projects_copy/ImagePatt/Images\
+\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.5370881026728296`*^9, 3.537088227465967*^9}, {
+  3.5370883029352837`*^9, 3.5370883042743607`*^9}, {3.7268181040603933`*^9, 
+  3.7268181596255007`*^9}},ExpressionUUID->"d7726800-accc-437e-8b01-\
+ea9a6aebf949"],
+
+Cell[BoxData["\<\"/Users/nick2/Teaching/PHAS2443/MiniProj/projects_copy/\
+ImagePatt/Images\"\>"], "Output",
+ CellChangeTimes->{{3.5370881957281523`*^9, 3.53708822873904*^9}, 
+   3.5370883054044247`*^9, 3.537089044488698*^9, 3.726818068335338*^9, 
+   3.726818164394486*^9, 3.726818323324081*^9, 3.726818460247242*^9, {
+   3.726818562641594*^9, 
+   3.726818599766621*^9}},ExpressionUUID->"9c9e4ad0-758b-436a-92b0-\
+ca041edba189"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"ff", "=", 
+  RowBox[{
+  "OpenRead", "[", "\"\<TEST2A.PBM\>\"", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Read", "[", "ff", "]"}], ";", 
+  RowBox[{"Read", "[", "ff", "]"}], ";", 
+  RowBox[{"Read", "[", "ff", "]"}], ";", " ", 
+  RowBox[{"Read", "[", "ff", "]"}], ";", 
+  RowBox[{"Read", "[", "ff", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"nx", ",", "ny"}], "}"}], "=", 
+  RowBox[{"Read", "[", 
+   RowBox[{"ff", ",", 
+    RowBox[{"{", 
+     RowBox[{"Number", ",", "Number"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"im", "=", 
+   RowBox[{"ReadList", "[", 
+    RowBox[{"ff", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{"Number", ",", 
+       RowBox[{"{", "nx", "}"}]}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Close", "[", "ff", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ArrayPlot", "[", "im", "]"}]}], "Input",
+ CellChangeTimes->{{3.5370883124618287`*^9, 3.5370883220113745`*^9}, {
+  3.5370883755184355`*^9, 3.5370884219420905`*^9}, {3.5370884612363377`*^9, 
+  3.537088482220538*^9}, {3.5370885788740664`*^9, 3.537088580299148*^9}, {
+  3.5370886133920407`*^9, 3.537088623453616*^9}, {3.5370887163949327`*^9, 
+  3.537088718017025*^9}, {3.537088787620006*^9, 3.537088839014946*^9}, {
+  3.7268183303354807`*^9, 3.726818356062069*^9}, {3.7268184216752043`*^9, 
+  3.726818425937838*^9}, {3.726818556316902*^9, 
+  3.726818558203877*^9}},ExpressionUUID->"1234f1dd-087a-4e2c-b974-\
+fc2ac95c3ec3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["InputStream",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource[
+               "FEBitmaps", "SquarePlusIconMedium"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}]], 
+            GraphicsBox[{
+              Thickness[0.0016806722689075631`], 
+              StyleBox[{
+                
+                FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                 1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                 25.499999999999996`, 2.5}, {25.499999999999996`, 
+                 1.3953100000000003`}, {24.604699999999998`, 
+                 0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                 0.49999999999999994`}, {1.3953100000000003`, 
+                 0.49999999999999994`}, {0.49999999999999994`, 
+                 1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                 0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                 24.604699999999998`}, {1.3953100000000003`, 
+                 25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                 25.499999999999996`}, {24.604699999999998`, 
+                 25.499999999999996`}, {25.499999999999996`, 
+                 24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                 25.499999999999996`, 2.5}}}]}, 
+               FaceForm[{
+                 GrayLevel[0.93], 
+                 Opacity[1.]}], StripOnInput -> False], 
+              StyleBox[{
+                
+                JoinedCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                 1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                 25.499999999999996`, 2.5}, {25.499999999999996`, 
+                 1.3953100000000003`}, {24.604699999999998`, 
+                 0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                 0.49999999999999994`}, {1.3953100000000003`, 
+                 0.49999999999999994`}, {0.49999999999999994`, 
+                 1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                 0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                 24.604699999999998`}, {1.3953100000000003`, 
+                 25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                 25.499999999999996`}, {24.604699999999998`, 
+                 25.499999999999996`}, {25.499999999999996`, 
+                 24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                 25.499999999999996`, 2.5}}}, CurveClosed -> {1}]}, 
+               JoinForm[{"Miter", 10.}], 
+               RGBColor[0.699951, 0.699951, 0.699951, 1.], StripOnInput -> 
+               False], 
+              StyleBox[{
+                
+                FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
+                 0, 1, 0}, {1, 3, 3}, {1, 3, 3}}}, {{{22.478099999999998`, 
+                 1.0035199999999997`}, {23.478899999999996`, 
+                 1.0035199999999997`}, {24.321099999999998`, 
+                 1.0035199999999997`}, {25.003899999999998`, 
+                 1.6863299999999997`}, {25.003899999999998`, 
+                 2.5285199999999994`}, {25.003899999999998`, 
+                 23.474999999999998`}, {25.003899999999998`, 
+                 24.317199999999996`}, {24.321099999999998`, 
+                 24.999999999999996`}, {23.478899999999996`, 
+                 24.999999999999996`}, {22.478099999999998`, 
+                 24.999999999999996`}, {22.478099999999998`, 
+                 24.999999999999993`}, {20.4805, 22.421099999999996`}, {
+                 20.4805, 13.0039}, {20.4805, 3.5867199999999992`}, {
+                 22.478099999999998`, 1.0035199999999997`}, {
+                 22.478099999999998`, 1.0035199999999997`}}}], 
+                
+                FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}}}, {{{3.50586, 12.9016}, {8.26328, 
+                 16.8398}, {8.26328, 14.856599999999998`}, {
+                 6.0230500000000005`, 12.947299999999997`}, {8.26328, 
+                 10.946100000000001`}, {8.26328, 8.96289}, {3.50586, 
+                 12.9016}}}]}, 
+               FaceForm[
+                RGBColor[0.5, 0.5, 0.5, 1.]], StripOnInput -> False], 
+              StyleBox[{
+                FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                 3}}}, {{{16.801199999999998`, 12.8969}, {16.801199999999998`,
+                  12.335499999999998`}, {17.256200000000003`, 
+                 11.880899999999999`}, {17.817599999999995`, 
+                 11.880899999999999`}, {18.378899999999998`, 
+                 11.880899999999999`}, {18.834, 12.335499999999998`}, {18.834,
+                  12.8969}, {18.834, 13.458200000000003`}, {
+                 18.378899999999998`, 13.9133}, {17.817599999999995`, 
+                 13.9133}, {17.256200000000003`, 13.9133}, {
+                 16.801199999999998`, 13.458200000000003`}, {
+                 16.801199999999998`, 12.8969}}}], 
+                
+                FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                 3}}}, {{{13.3812, 12.8969}, {13.3812, 12.335499999999998`}, {
+                 13.836300000000001`, 11.880899999999999`}, {
+                 14.397699999999999`, 11.880899999999999`}, {
+                 14.958999999999998`, 11.880899999999999`}, {
+                 15.413699999999999`, 12.335499999999998`}, {
+                 15.413699999999999`, 12.8969}, {15.413699999999999`, 
+                 13.458200000000003`}, {14.958999999999998`, 13.9133}, {
+                 14.397699999999999`, 13.9133}, {13.836300000000001`, 
+                 13.9133}, {13.3812, 13.458200000000003`}, {13.3812, 
+                 12.8969}}}], 
+                
+                FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                 3}}}, {{{9.961329999999998, 12.8969}, {9.961329999999998, 
+                 12.335499999999998`}, {10.4164, 11.880899999999999`}, {
+                 10.977699999999999`, 11.880899999999999`}, {
+                 11.538699999999999`, 11.880899999999999`}, {11.9938, 
+                 12.335499999999998`}, {11.9938, 12.8969}, {11.9938, 
+                 13.458200000000003`}, {11.538699999999999`, 13.9133}, {
+                 10.977699999999999`, 13.9133}, {10.4164, 13.9133}, {
+                 9.961329999999998, 13.458200000000003`}, {9.961329999999998, 
+                 12.8969}}}]}, 
+               FaceForm[
+                RGBColor[
+                0.46093800000000007`, 0.46093800000000007`, 
+                 0.46093800000000007`, 1.]], StripOnInput -> False]}, 
+             Background -> GrayLevel[0.5], Axes -> False, AspectRatio -> 1, 
+             ImageSize -> {Automatic, 
+               Dynamic[
+               3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])]}, Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.7]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  StyleBox[
+                   PaneBox[
+                   "\"TEST2A.PBM\"", ContentPadding -> False, FrameMargins -> 
+                    0, StripOnInput -> True, BaselinePosition -> Baseline, 
+                    ImageSize -> {{1, 300}, Automatic}], LineBreakWithin -> 
+                   False], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Unique ID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource[
+               "FEBitmaps", "SquareMinusIconMedium"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}]], 
+            GraphicsBox[{
+              Thickness[0.0016806722689075631`], 
+              StyleBox[{
+                FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                 1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                 25.499999999999996`, 2.5}, {25.499999999999996`, 
+                 1.3953100000000003`}, {24.604699999999998`, 
+                 0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                 0.49999999999999994`}, {1.3953100000000003`, 
+                 0.49999999999999994`}, {0.49999999999999994`, 
+                 1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                 0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                 24.604699999999998`}, {1.3953100000000003`, 
+                 25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                 25.499999999999996`}, {24.604699999999998`, 
+                 25.499999999999996`}, {25.499999999999996`, 
+                 24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                 25.499999999999996`, 2.5}}}]}, 
+               FaceForm[{
+                 GrayLevel[0.93], 
+                 Opacity[1.]}], StripOnInput -> False], 
+              StyleBox[{
+                
+                JoinedCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                 1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                 25.499999999999996`, 2.5}, {25.499999999999996`, 
+                 1.3953100000000003`}, {24.604699999999998`, 
+                 0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                 0.49999999999999994`}, {1.3953100000000003`, 
+                 0.49999999999999994`}, {0.49999999999999994`, 
+                 1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                 0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                 24.604699999999998`}, {1.3953100000000003`, 
+                 25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                 25.499999999999996`}, {24.604699999999998`, 
+                 25.499999999999996`}, {25.499999999999996`, 
+                 24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                 25.499999999999996`, 2.5}}}, CurveClosed -> {1}]}, 
+               JoinForm[{"Miter", 10.}], 
+               RGBColor[0.699951, 0.699951, 0.699951, 1.], StripOnInput -> 
+               False], 
+              StyleBox[{
+                
+                FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
+                 0, 1, 0}, {1, 3, 3}, {1, 3, 3}}}, {{{22.478099999999998`, 
+                 1.0035199999999997`}, {23.478899999999996`, 
+                 1.0035199999999997`}, {24.321099999999998`, 
+                 1.0035199999999997`}, {25.003899999999998`, 
+                 1.6863299999999997`}, {25.003899999999998`, 
+                 2.5285199999999994`}, {25.003899999999998`, 
+                 23.474999999999998`}, {25.003899999999998`, 
+                 24.317199999999996`}, {24.321099999999998`, 
+                 24.999999999999996`}, {23.478899999999996`, 
+                 24.999999999999996`}, {22.478099999999998`, 
+                 24.999999999999996`}, {22.478099999999998`, 
+                 24.999999999999993`}, {20.4805, 22.421099999999996`}, {
+                 20.4805, 13.0039}, {20.4805, 3.5867199999999992`}, {
+                 22.478099999999998`, 1.0035199999999997`}, {
+                 22.478099999999998`, 1.0035199999999997`}}}], 
+                
+                FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}}}, {{{3.50586, 12.9016}, {8.26328, 
+                 16.8398}, {8.26328, 14.856599999999998`}, {
+                 6.0230500000000005`, 12.947299999999997`}, {8.26328, 
+                 10.946100000000001`}, {8.26328, 8.96289}, {3.50586, 
+                 12.9016}}}]}, 
+               FaceForm[
+                RGBColor[0.5, 0.5, 0.5, 1.]], StripOnInput -> False], 
+              StyleBox[{
+                
+                FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                 3}}}, {{{16.801199999999998`, 12.8969}, {16.801199999999998`,
+                  12.335499999999998`}, {17.256200000000003`, 
+                 11.880899999999999`}, {17.817599999999995`, 
+                 11.880899999999999`}, {18.378899999999998`, 
+                 11.880899999999999`}, {18.834, 12.335499999999998`}, {18.834,
+                  12.8969}, {18.834, 13.458200000000003`}, {
+                 18.378899999999998`, 13.9133}, {17.817599999999995`, 
+                 13.9133}, {17.256200000000003`, 13.9133}, {
+                 16.801199999999998`, 13.458200000000003`}, {
+                 16.801199999999998`, 12.8969}}}], 
+                
+                FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                 3}}}, {{{13.3812, 12.8969}, {13.3812, 12.335499999999998`}, {
+                 13.836300000000001`, 11.880899999999999`}, {
+                 14.397699999999999`, 11.880899999999999`}, {
+                 14.958999999999998`, 11.880899999999999`}, {
+                 15.413699999999999`, 12.335499999999998`}, {
+                 15.413699999999999`, 12.8969}, {15.413699999999999`, 
+                 13.458200000000003`}, {14.958999999999998`, 13.9133}, {
+                 14.397699999999999`, 13.9133}, {13.836300000000001`, 
+                 13.9133}, {13.3812, 13.458200000000003`}, {13.3812, 
+                 12.8969}}}], 
+                
+                FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                 3}}}, {{{9.961329999999998, 12.8969}, {9.961329999999998, 
+                 12.335499999999998`}, {10.4164, 11.880899999999999`}, {
+                 10.977699999999999`, 11.880899999999999`}, {
+                 11.538699999999999`, 11.880899999999999`}, {11.9938, 
+                 12.335499999999998`}, {11.9938, 12.8969}, {11.9938, 
+                 13.458200000000003`}, {11.538699999999999`, 13.9133}, {
+                 10.977699999999999`, 13.9133}, {10.4164, 13.9133}, {
+                 9.961329999999998, 13.458200000000003`}, {9.961329999999998, 
+                 12.8969}}}]}, 
+               FaceForm[
+                RGBColor[
+                0.46093800000000007`, 0.46093800000000007`, 
+                 0.46093800000000007`, 1.]], StripOnInput -> False]}, 
+             Background -> GrayLevel[0.5], Axes -> False, AspectRatio -> 1, 
+             ImageSize -> {Automatic, 
+               Dynamic[
+               3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])]}, Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.7]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  PaneBox[
+                  "\"TEST2A.PBM\"", ImageSize -> {{1, 500}, Automatic}, 
+                   BaselinePosition -> Baseline, ContentPadding -> False, 
+                   FrameMargins -> 0, StripOnInput -> True], 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Unique ID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Binary: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["False", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Open: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[Options[
+                    InputStream["TEST2A.PBM", 3]] =!= {}, StandardForm], 
+                   UpdateInterval -> 1], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel",
+     DisplayFunction->(
+      ButtonBox[#, Active -> False, Alignment -> Left, 
+       Appearance -> {
+        "Default" -> 
+         FrontEnd`FileName[{"Typeset", "SummaryBox"}, "Panel.9.png"]}, 
+       FrameMargins -> 7, BaseStyle -> {}, 
+       DefaultBaseStyle -> {"Panel", Background -> None}, BaselinePosition -> 
+       Baseline]& )],
+    DynamicModuleValues:>{}], "]"}],
+  InputStream["TEST2A.PBM", 3],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.537088323380453*^9, 3.537088425008266*^9, {3.53708848539172*^9, 
+   3.5370885134513245`*^9}, 3.5370886431067405`*^9, {3.53708881338548*^9, 
+   3.5370888401080084`*^9}, {3.726818323457024*^9, 3.7268183575330257`*^9}, 
+   3.726818460296813*^9, {3.726818562828034*^9, 
+   3.726818599834177*^9}},ExpressionUUID->"2d2b384d-7a9a-452a-9cb4-\
+f14888c4c5d2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"30", ",", "30"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.537088323380453*^9, 3.537088425008266*^9, {3.53708848539172*^9, 
+   3.5370885134513245`*^9}, 3.5370886431067405`*^9, {3.53708881338548*^9, 
+   3.5370888401080084`*^9}, {3.726818323457024*^9, 3.7268183575330257`*^9}, 
+   3.726818460296813*^9, {3.726818562828034*^9, 
+   3.726818599849484*^9}},ExpressionUUID->"702fab3f-e661-4994-9dce-\
+0d93ae2d9f29"],
+
+Cell[BoxData["\<\"TEST2A.PBM\"\>"], "Output",
+ CellChangeTimes->{
+  3.537088323380453*^9, 3.537088425008266*^9, {3.53708848539172*^9, 
+   3.5370885134513245`*^9}, 3.5370886431067405`*^9, {3.53708881338548*^9, 
+   3.5370888401080084`*^9}, {3.726818323457024*^9, 3.7268183575330257`*^9}, 
+   3.726818460296813*^9, {3.726818562828034*^9, 
+   3.726818599853086*^9}},ExpressionUUID->"1ce02c2f-cb6c-44f0-9ae0-\
+289b4e4c7ad1"],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmJiYGCQg2L6AEYIGJUdWbKMWMDQlqUJAAAwTALo
+   "], {{0, 0}, {30, 30}}, {0, 1}],
+  Frame->Automatic,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> 
+    Automatic}]], "Output",
+ CellChangeTimes->{
+  3.537088323380453*^9, 3.537088425008266*^9, {3.53708848539172*^9, 
+   3.5370885134513245`*^9}, 3.5370886431067405`*^9, {3.53708881338548*^9, 
+   3.5370888401080084`*^9}, {3.726818323457024*^9, 3.7268183575330257`*^9}, 
+   3.726818460296813*^9, {3.726818562828034*^9, 
+   3.7268185998849087`*^9}},ExpressionUUID->"67cb011d-4f1c-4ea6-862e-\
+9bbc71c9fb8c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", 
+  RowBox[{"im", "[", 
+   RowBox[{"[", "2", "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5370885274941278`*^9, 3.5370885365286446`*^9}, {
+  3.726818580086422*^9, 
+  3.726818580119594*^9}},ExpressionUUID->"9e1b8a10-cf30-401b-b506-\
+ab302653e833"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"List", "[", 
+    RowBox[{
+    "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1",
+      ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", 
+     ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", 
+     ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", 
+     ",", "1"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{
+  3.537088537307689*^9, 3.5370888212309284`*^9, 3.726818323583168*^9, 
+   3.726818460562832*^9, {3.726818562942075*^9, 
+   3.726818599913103*^9}},ExpressionUUID->"66d02586-1a25-4b27-9acf-\
+ae4aae964463"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"imobj", "=", 
+   RowBox[{"Import", "[", "\"\<8.PBM\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "imobj", "]"}]}], "Input",
+ CellChangeTimes->{{3.5370883124618287`*^9, 3.5370883220113745`*^9}, {
+  3.5370883755184355`*^9, 3.5370884219420905`*^9}, {3.5370884612363377`*^9, 
+  3.537088482220538*^9}, {3.5370885788740664`*^9, 3.537088580299148*^9}, {
+  3.5370886133920407`*^9, 3.537088623453616*^9}, {3.5370887163949327`*^9, 
+  3.537088718017025*^9}, {3.537088787620006*^9, 3.537088839014946*^9}, {
+  3.5370890056464767`*^9, 3.5370890383713484`*^9}, {3.726818592495475*^9, 
+  3.726818595925158*^9}},ExpressionUUID->"f6118d26-2135-4c65-9e73-\
+3171861880f9"],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRJI
+mToQizDgB4wYAlCATYwRUwRJFMZGF8PPYkQVQrCxiGG4AV0dskJCYjj0MqJb
+zICukKCX0FlYvQSzDiWowTz04McWIwxYhIgVw2IeRlyiuA9r1OCOTEQAYRVj
+QBbDGtCMaGK40wlOnzDgAgChTw2/
+   "], {{0, 0}, {20, 39}}, {0, 1},
+   ColorFunction->GrayLevel],
+  ImageSize->{20, 39},
+  PlotRange->{{0, 20}, {0, 39}}]], "Output",
+ CellChangeTimes->{
+  3.5370890518621197`*^9, 3.726818323677038*^9, 3.726818460614002*^9, {
+   3.726818563038135*^9, 
+   3.726818599952065*^9}},ExpressionUUID->"da6d6dae-14a9-4eef-93b3-\
+a8d5e75c07f0"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7268181800828342`*^9, 
+  3.726818223381752*^9}},ExpressionUUID->"addb1f14-f837-408e-b614-\
+a11fdb4aa571"]
+},
+WindowSize->{707, 545},
+WindowMargins->{{50, Automatic}, {Automatic, 124}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 378, 7, 52, "Input",ExpressionUUID->"d7726800-accc-437e-8b01-ea9a6aebf949"],
+Cell[960, 31, 427, 7, 34, "Output",ExpressionUUID->"9c9e4ad0-758b-436a-92b0-ca041edba189"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1424, 43, 1509, 36, 136, "Input",ExpressionUUID->"1234f1dd-087a-4e2c-b974-fc2ac95c3ec3"],
+Cell[2936, 81, 18986, 347, 64, "Output",ExpressionUUID->"2d2b384d-7a9a-452a-9cb4-f14888c4c5d2"],
+Cell[21925, 430, 449, 9, 34, "Output",ExpressionUUID->"702fab3f-e661-4994-9dce-0d93ae2d9f29"],
+Cell[22377, 441, 419, 7, 34, "Output",ExpressionUUID->"1ce02c2f-cb6c-44f0-9ae0-289b4e4c7ad1"],
+Cell[22799, 450, 766, 18, 376, "Output",ExpressionUUID->"67cb011d-4f1c-4ea6-862e-9bbc71c9fb8c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23602, 473, 293, 7, 30, "Input",ExpressionUUID->"9e1b8a10-cf30-401b-b506-ab302653e833"],
+Cell[23898, 482, 739, 18, 67, "Output",ExpressionUUID->"66d02586-1a25-4b27-9acf-ae4aae964463"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24674, 505, 713, 13, 52, "Input",ExpressionUUID->"f6118d26-2135-4c65-9e73-3171861880f9"],
+Cell[25390, 520, 602, 14, 56, "Output",ExpressionUUID->"da6d6dae-14a9-4eef-93b3-a8d5e75c07f0"]
+}, Open  ]],
+Cell[26007, 537, 154, 3, 64, "Input",ExpressionUUID->"addb1f14-f837-408e-b614-a11fdb4aa571"]
+}
+]
+*)
+
